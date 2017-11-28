@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/student/shr062/cmpt436/java-sChat/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+491275385.index
+1101172076.index
+846238722.index
+497094359.index
+1460135034.index
+1316493384.index

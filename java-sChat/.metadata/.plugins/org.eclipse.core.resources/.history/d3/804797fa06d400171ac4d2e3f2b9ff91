@@ -1,0 +1,66 @@
+package messanger.sChat.resources;
+
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.UriInfo;
+
+import messanger.sChat.model.Message;
+import messanger.sChat.model.Rooms;
+import messanger.sChat.service.ChatRoomService;
+import messanger.sChat.service.MessageService;
+
+@Path("/chatRoom")
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+public class chatRoomResources {
+
+
+	ChatRoomService chatroomService  = new ChatRoomService();
+
+	@GET
+	@Path("/getAllchatrooms")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Rooms> getAllChatRooms(){
+		return chatroomService.getAllchatrooms();
+	} 
+	
+	
+	
+	@POST
+	public Rooms addChatRoom(Rooms name) {
+		return chatroomService.addRoom(name);
+		
+	}
+	
+
+	
+	@DELETE
+	@Path("/{chatroomId}")
+	public void deleteChatRoom(@PathParam("chatroomId") long id) {
+		chatroomService.removeChatRoom(id);
+	}
+	
+	
+	@GET
+	@Path("/{chatroomId}")
+	public Rooms getChatRoom(@PathParam("chatroomId") long id,  @Context UriInfo uriInfo) {
+		Rooms room = chatroomService.getchatroom(id);		
+		return room;
+		
+	}
+
+
+	
+}
+
+

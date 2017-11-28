@@ -1,0 +1,26 @@
+package messanger.sChat.service;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
+
+import messanger.sChat.Database.ChatRooms;
+import messanger.sChat.model.Rooms;
+
+public class ChatRoomService {
+	
+private Map<Long, Rooms> chatRooms = ChatRooms.getChatRooms();
+	
+	public ChatRoomService() {
+		chatRooms.put(1L, new Message(1, "ChatRoom 1", "Shahriar"));
+		chatRooms.put(2L, new Message(2, "ChatRoom 2", "Joe"));
+	}
+
+	public List<Message> getAllchatrooms() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+}

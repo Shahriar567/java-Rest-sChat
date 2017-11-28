@@ -1,0 +1,53 @@
+!SESSION 2017-11-28 10:16:12.715 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_141
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+This is a continuation of log file /student/shr062/cmpt436/java-sChat/.metadata/.bak_0.log
+Created Time: 2017-11-28 10:57:02.959
+
+!ENTRY ccw.core 1 0 2017-11-28 10:57:02.962
+!MESSAGE removed from launchNameREPLURLPromiseAndWithREPLView the key Tomcat v7.0 Server at localhost
+
+!ENTRY ccw.core 1 0 2017-11-28 10:57:03.254
+!MESSAGE removed from launchNameREPLURLPromiseAndWithREPLView the key Tomcat v7.0 Server at localhost
+
+!ENTRY org.scala-ide.sdt.aspects 4 0 2017-11-28 10:58:34.994
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: org.scala-ide.sdt.aspects [1154]
+  Unresolved requirement: Require-Bundle: org.aspectj.runtime
+
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.getModuleClassLoader(EquinoxBundle.java:586)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:560)
+	at org.eclipse.equinox.weaving.hooks.WeavingLoaderDelegateHook.postFindClass(WeavingLoaderDelegateHook.java:104)
+	at org.eclipse.osgi.internal.loader.BundleLoader.searchHooks(BundleLoader.java:500)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:463)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.eclipse.core.internal.expressions.Expressions.loadClass(Expressions.java:109)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:85)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:51)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:112)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:51)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:65)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:22)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:51)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:160)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:51)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:51)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getShortcutsForSelection(LaunchingResourceManager.java:454)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:240)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:142)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)

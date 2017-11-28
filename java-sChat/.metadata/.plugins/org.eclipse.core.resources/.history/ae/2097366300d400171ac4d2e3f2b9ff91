@@ -1,0 +1,17 @@
+package messanger.sChat.Database;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import messanger.sChat.model.Message;
+
+public class ChatRooms {
+	
+	private static Map<Long, Message> rooms = new HashMap<>();
+	
+
+public static Map<Long, Message> getMessages(){
+	return rooms;
+}
+
+}

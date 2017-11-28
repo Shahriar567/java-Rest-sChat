@@ -1,0 +1,5 @@
+package messanger.sChat.service;
+
+public class ChatRoomService {
+
+}

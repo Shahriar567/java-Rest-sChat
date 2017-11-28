@@ -1,0 +1,72 @@
+package messanger.sChat.service;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Map;
+
+import messanger.sChat.Database.ChatRooms;
+import messanger.sChat.model.Message;
+
+public class ChatRoomService {
+	
+private Map<Long, Message> chatRooms = ChatRooms.getChatRooms();
+	
+	public chatService() {
+		chatRooms.put(1L, new Message(1, "ChatRoom 1", "Shahriar"));
+		chatRooms.put(2L, new Message(2, "ChatRoom 2", "Joe"));
+	}
+	
+	public List<ChatRooms> getAllchatRooms() {
+		return new ArrayList<ChatRooms>(chatRooms.values()); 
+	}
+	
+	public List<ChatRooms> getAllMessagesForYear(int year) {
+		List<Message> messagesForYear = new ArrayList<>();
+		Calendar cal = Calendar.getInstance();
+		for (Message message : messages.values()) {
+			cal.setTime(message.getCreated());
+			if (cal.get(Calendar.YEAR) == year) {
+				messagesForYear.add(message);
+			}
+		}
+		return messagesForYear;
+	}
+	
+	public List<ChatRooms> getAllMessagesPaginated(int start, int size) {
+		ArrayList<Message> list = new ArrayList<Message>(messages.values());
+		if (start + size > list.size()) return new ArrayList<Message>();
+		return list.subList(start, start + size); 
+	}
+	
+	
+	public Message getMessage(long id) {
+		Message message = chatRooms.get(id);
+		if (message == null) {
+			return null;
+		}
+		return message;
+	}
+	
+	public ChatRooms addChatRoom(ChatRooms name) {
+		chatRooms.setId(chatRooms.size() + 1);
+		chatRooms.put(chatRooms.getId(), name);
+		return name;
+	}
+	
+	public ChatRooms updateMessage(Message message) {
+		if (message.getId() <= 0) {
+			return null;
+		}
+		messages.put(message.getId(), message);
+		return message;
+	}
+	
+	public ChatRooms removeMessage(long id) {
+		return messages.remove(id);
+	}
+	
+
+	
+
+}

@@ -1,0 +1,5 @@
+package messanger.sChat.Database;
+
+public class ChatRooms {
+
+}

@@ -1,0 +1,20 @@
+package messanger.sChat.Database;
+
+import java.util.Map;
+
+import messanger.sChat.model.Message;
+
+public class DatabaseClass {
+
+	private static Map<Long, Message> messages = newHashMap<>();
+	
+
+
+public static Map<Long, Message> getMessage(){
+	
+	return messages;
+	
+}
+
+
+}
